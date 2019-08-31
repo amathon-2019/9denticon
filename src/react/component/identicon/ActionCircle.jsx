@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Identicon } from "./Identicon";
 
-const ArticonCircle = () => {
+const ArticonCircle = ({ hashText }) => {
   useEffect(() => {
     const canvas = document.querySelector("#canvas1");
 
     let identicon = new Identicon(
       canvas,
       240,
-      String(Math.floor(Math.random() * 500))
+      hashText
     );
     identicon.circles();
   });

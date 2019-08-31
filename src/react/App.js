@@ -140,7 +140,7 @@ class App extends Component {
                   </div>
                 </div>
                 <div id="treeDown" style={{ display: "inline-block" }}>
-                  <ArticonTree />
+                  <ArticonTree hashText={this.state.textHash} />
                 </div>
                 <button
                   className="APP_Design_DownloadBtn"
@@ -159,7 +159,7 @@ class App extends Component {
                   </div>
                 </div>
                 <div id="circleDown" style={{ display: "inline-block" }}>
-                  <ArticonCircle />
+                  <ArticonCircle hashText={this.state.textHash} />
                 </div>
                 <button
                   className="APP_Design_DownloadBtn"

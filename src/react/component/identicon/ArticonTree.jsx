@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
 import { Identicon } from "./Identicon";
 
-const ArticonTree = () => {
+const ArticonTree = ({ hashText }) => {
   useEffect(() => {
     const canvas = document.querySelector("#canvas");
 
-    let identicon = new Identicon(
-      canvas,
-      240,
-      String(Math.floor(Math.random() * 500))
-    );
+    let identicon = new Identicon(canvas, 240, hashText);
     identicon.tree();
   });
 

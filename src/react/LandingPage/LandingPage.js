@@ -4,7 +4,6 @@ import { FULLPAGE_API_KEY } from "../../secret/index";
 
 const Fullpage = () => (
   <ReactFullpage
-    //fullpage options
     licenseKey={FULLPAGE_API_KEY}
     scrollingSpeed={1000} /* Options here */
     scrollHorizontally={true} /* Because we are using the extension */
@@ -12,26 +11,134 @@ const Fullpage = () => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
+          {/* section 1 */}
+          <div
+            className="section"
+            style={{ backgroundColor: "rgb(32, 33, 34)" }}
+          >
+            <div className="page1_sectionContainer">
               <div>
-                <p>9denticon: More Flexible generation of identicons</p>
-                <p>Get your own unique identicons</p>
-                <button onClick={() => fullpageApi.moveSectionDown()}>
-                  Down
-                </button>
+                <div className="page1_titleText">
+                  9denticon: More Flexible generation of identicons
+                </div>
+                <div className="page1_subText">자신만의 고유한 아이덴티콘</div>
               </div>
             </div>
           </div>
-          <div className="section">
-            <p>Section 2</p>
+          {/* section 2 */}
+          <div
+            className="section"
+            style={{ backgroundColor: "rgb(32, 33, 34)" }}
+          >
+            <div className="page2_sectionContainer">
+              <div>
+                <div className="page2_titleText">What is identicon?</div>
+                <div className="page2_subText">
+                  사용자를 아바타의 형태로 식별하면서 사용자의 개인 정보를
+                  보호하는 역할을하는 해시 값, 일반적으로 IP 주소의 시각적
+                  표현입니다.
+                </div>
+              </div>
+              <div>
+                <img
+                  src={require("../../assets/images/giticon.png")}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              </div>
+            </div>
+          </div>
+          {/* section 3 */}
+          <div
+            className="section"
+            style={{ backgroundColor: "rgb(32, 33, 34)" }}
+          >
+            <div className="page3_sectionContainer">
+              <div>
+                <div className="page3_titleText">
+                  The difference between 9denticon and identicon
+                </div>
+                <div className="page3_subText_container">
+                  <div className="page3_subText">
+                    - 보다 아름다움을 추구하며 중복없는 독창적인 프로필 이미지를
+                    제공합니다.
+                  </div>
+                  <div className="page3_subText">
+                    - SVG 및 JPEG등.. 이미지 파일로 추출 및 저장할 수 있습니다.
+                  </div>
+                </div>
+                <div className="page3_image_container">
+                  <img
+                    src={require("../../assets/images/circle1.png")}
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                  <img
+                    src={require("../../assets/images/tree1.png")}
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                  <img
+                    src={require("../../assets/images/impressiveIcon.jpeg")}
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                  <img
+                    src={require("../../assets/images/goticon.jpeg")}
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* section 4 */}
+          <div
+            className="section"
+            style={{ backgroundColor: "rgb(32, 33, 34)" }}
+          >
+            <div className="page4_sectionContainer">
+              <div>
+                <div className="page4_titleText">9denticon Mechanism</div>
+                <div className="page4_subText_container">
+                  <div className="page4_subText">
+                    - 해시 알고리즘(SHA-1, Etc..)을 이용하여 임의의 문자열을
+                    생성합니다.
+                  </div>
+                  <div className="page4_subText">
+                    - 임의 문자열에서 매개 변수 추출합니다.
+                  </div>
+                  <div className="page4_subText">
+                    - 추출한 매개변수를 사용하여 9denticon을 생성합니다.
+                  </div>
+                </div>
+                <div className="page4_image_container">
+                  <img
+                    src={require("../../assets/images/Slide1.png")}
+                    style={{ height: "300px" }}
+                  />
+                  <img
+                    src={require("../../assets/images/Slide3.png")}
+                    style={{ height: "300px" }}
+                  />
+                  <img
+                    src={require("../../assets/images//Slide4.png")}
+                    style={{ height: "300px" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* section 5 */}
+          <div
+            className="section"
+            style={{ backgroundColor: "rgb(32, 33, 34)" }}
+          >
+            <div className="page5_sectionContainer">
+              <div className="page5_GoToPage_Container">
+                <button
+                  onClick={() => console.log("onClick")}
+                  className="page5_GoToPage"
+                >
+                  Go To 9denticon
+                </button>
+              </div>
+            </div>
           </div>
         </ReactFullpage.Wrapper>
       );

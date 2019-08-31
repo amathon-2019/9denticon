@@ -1,0 +1,87 @@
+/*===============
+  랜딩페이지 CSS
+===============*/
+
+.page1_sectionContainer,
+.page2_sectionContainer,
+.page3_sectionContainer,
+.page4_sectionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 20%;
+}
+
+.page1_titleText,
+.page2_titleText,
+.page3_titleText,
+.page4_titleText {
+  width: 900px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.page1_subText,
+.page2_subText {
+  margin-top: 20px;
+  width: 720px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.page3_subText_container,
+.page4_subText_container {
+  margin-top: 20px;
+}
+
+.page3_image_container,
+.page4_image_container {
+  margin-top: 50px;
+}
+
+.page3_image_container img {
+  margin-right: 50px;
+}
+
+.page4_image_container img {
+  margin: 0 20px 18px 0;
+}
+
+.page3_subText,
+.page4_subText {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.page5_GoToPage_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.page5_GoToPage {
+  background-color: rgb(32, 33, 34);
+  /* Green */
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease-out;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.page5_GoToPage:hover {
+  background-color: #ffffff;
+  color: rgb(32, 33, 34);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.page5_GoToPage:focus {
+  outline: none;
+}

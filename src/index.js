@@ -5,6 +5,11 @@ import React from "react";
 import ReactDom from "react-dom";
 
 //----------------------------
+// import css
+//----------------------------
+import "./index.css";
+
+//----------------------------
 // import App.js
 //----------------------------
 import App from "./react/App.js";

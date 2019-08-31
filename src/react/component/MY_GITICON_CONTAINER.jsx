@@ -9,8 +9,7 @@ const MY_GITICON_CONTAINER = ({ binaryTextSource, type }) => {
         style={{
           display: "inline-block",
           height: undefined,
-          width: undefined,
-          border: "3px solid rgba(0,0,0,0.5)"
+          width: undefined
         }}
       >
         <div

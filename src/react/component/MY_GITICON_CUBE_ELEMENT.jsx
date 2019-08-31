@@ -88,7 +88,6 @@ const MY_GITICON_CUBE_ELEMENT = ({ data, colorValue, type }) => {
                     })`
                   : "#ffffff",
               borderRadius: type === "circle" ? 5 : 0
-              // borderRadius: 20
             }}
           ></div>
         </div>

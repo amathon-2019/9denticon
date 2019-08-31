@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Identicon</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 100%;
+			height: 100%;
+			background: #f2f3f4;
+		}
+
+		#canvas {
+			/*border: 1px solid lightgray;*/
+			background: white;
+			/*width: 250px;*/
+			/*height: 250px;*/
+			margin: 50px;
+		}
+	</style>
+
+	<script src="sha1.js"></script>
+	<script src="sha2.js"></script>
+	<script src="paper-full.min.js"></script>
+
+	<script defer>
+
+	window.onload = function() {
+		// Get a reference to the canvas object
+		var canvas = document.querySelector('#canvas');
+		canvas.width = 500;
+		canvas.height = 500;
+
+		var scale = canvas.width / 100;
+
+		// Create an empty project and a view for the canvas:
+		paper.setup(canvas);
+
+		var position = 0; // Position along hashed binary string
+		var hash = strToBinArr(String(Math.floor(Math.random() * 500)));
+		// var hash = strToBinArr('terrykwon');
+
+		var keyPoints = [
+			[-50, -50], [50, -50], [150, -50],
+			[0, 0], [50, 0], [100, 0],
+			[-50, 50], [0, 50], [50, 50], [100, 50], [150, 50],
+			[0, 100], [50, 100], [100, 100],
+			[-50, 150], [50, 150], [150, 150]
+		]
+
+		var getParam = function(bits) {
+			bitArr = hash.slice(position, position+bits);
+			position += bits;
+			return binArrToInt(bitArr);	
+		}
+
+		for (let keyPoint of keyPoints) {
+			console.log(keyPoint);
+			let draw = getParam(1);
+
+
+			if (1) {
+				let point = new paper.Point(keyPoint[0]*scale, keyPoint[1]*scale);
+				// let point = new paper.Point(100 * 5, 100 * 5);
+
+				let radius = getParam(4) / 16 * 75 + 5;
+				console.log(radius);
+				radius *= scale;
+
+				let circle = new paper.Shape.Circle(point, radius);
+
+				let r = Math.floor(getParam(4) / 16 * 256);
+				let g = Math.floor(getParam(4) / 16 * 256);
+				let b = Math.floor(getParam(4) / 16 * 256);
+
+				let o = getParam(4) / 16 * 0.7 + 0.1;
+
+				circle.fillColor = `rgba(${r}, ${g}, ${b}, 0.3)`;
+				// circle.fillColor = '#dfdfdf50'
+			}
+
+		}
+
+		// let circle = new paper.Shape.Circle(new paper.Point(150, 150), 300);
+		// circle.fillColor = '#ff0000050';
+
+		paper.view.draw();
+	}
+
+	var binArrToInt = function(arr) {
+		let pos = 0;
+		let res = 0;
+
+		for (let b of arr) {
+			res += b << pos;
+			pos += 1;
+		}
+
+		return res;
+	}
+
+	var strToBinArr = function(string) {
+		let hashed = sha1.array(string);
+		// let hashed = sha256(string);
+		let arr = Array();
+		console.log(hashed);
+
+		for (let i of hashed) {
+			console.log(i);
+			let byte = i;
+			for (let j = 0; j < 8; j++) {
+				bit = (byte >> j) & 1;
+				arr.push(bit);
+			}
+		}
+
+		return arr.concat(arr).concat(arr).concat(arr);
+	}
+
+
+
+	</script>
+
+</head>
+
+<body>
+	<!-- <h1>Parametric animations</h1> -->
+
+	<canvas id="canvas">
+	</canvas>
+
+	<!-- <canvas id="canvas" width=500 height-500></canvas> -->
+
+</body>
+
+</html>

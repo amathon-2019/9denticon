@@ -85,3 +85,142 @@
 .page5_GoToPage:focus {
   outline: none;
 }
+
+
+/*===============
+  시연페이지 CSS
+===============*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#canvas {
+  background-color: #ffffff;
+}
+
+.APP_Background {
+  background-color: rgb(32, 33, 34);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.APP_InputBox_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.APP_Title {
+  margin: 50px 0;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.APP_HashText {
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.APP_Input_Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.APP_Input {
+  width: 350px;
+  padding: 8px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgb(32, 33, 34);
+  color: #fff;
+  margin-right: 8px;
+}
+
+.APP_Input:focus {
+  outline: none;
+}
+
+.APP_ConverBtn {
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgb(32, 33, 34);
+  color: #fff;
+  font-weight: 600;
+}
+
+.APP_ConverBtn:hover {
+  background-color: #ffffff;
+  color: rgb(32, 33, 34);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.APP_ConverBtn:focus {
+  outline: none;
+}
+
+.APP_Body_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.APP_Design_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.APP_Design_Content {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.APP_Design_Title {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.APP_Design_Description {
+  width: 280px;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.APP_Design_DownloadBtn {
+  margin-top: 50px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgb(32, 33, 34);
+  color: #fff;
+  font-weight: 600;
+}
+
+.APP_Design_DownloadBtn:hover {
+  background-color: #ffffff;
+  color: rgb(32, 33, 34);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.APP_Design_DownloadBtn:focus {
+  outline: none;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import MY_GITICON_CUBE_ELEMENT from "./MY_GITICON_CUBE_ELEMENT";
-import { array2dMaker } from "../../helper/utils";
+import { array2dMaker } from "../../../helper/utils";
 
 const MY_GITICON_CUBE = ({ cubeData, colorValue, type }) => {
   if (!cubeData) return null;

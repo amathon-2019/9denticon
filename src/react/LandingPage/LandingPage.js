@@ -1,6 +1,7 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { FULLPAGE_API_KEY } from "../../secret/index";
+import { Link } from "react-router-dom";
 
 const Fullpage = () => (
   <ReactFullpage
@@ -131,12 +132,13 @@ const Fullpage = () => (
           >
             <div className="page5_sectionContainer">
               <div className="page5_GoToPage_Container">
-                <button
-                  onClick={() => console.log("onClick")}
+                <Link
                   className="page5_GoToPage"
+                  to="/"
+                  onClick={() => localStorage.setItem("isAboutShown", true)}
                 >
                   Go To 9denticon
-                </button>
+                </Link>
               </div>
             </div>
           </div>

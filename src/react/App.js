@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import sha1 from "sha-1";
 import domtoimage from "dom-to-image";
 import { array2dMaker } from "../helper/utils";
-import MY_GITICON_CONTAINER from "./component/MY_GITICON_CONTAINER";
+import MY_GITICON_CONTAINER from "./component/impressiveGiticon/MY_GITICON_CONTAINER";
+import ArticonTree from "./component/identicon/ArticonTree";
+import ArticonCircle from "./component/identicon/ActionCircle";
 
 class App extends Component {
   constructor(props) {
@@ -63,45 +65,113 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <div>DEV environment - Demo Page</div>
-        <div>{`HASH TEXT : ${this.state.textHash}`}</div>
+      <div className="APP_Background">
+        <div className="APP_InputBox_Container">
+          <div className="APP_Title">9denticon</div>
+          <div className="APP_Input_Container">
+            <input
+              className="APP_Input"
+              type="text"
+              onChange={e => this.handleChange(e)}
+              placeholder="9denticon으로 만들고 싶은 텍스트를 입력해주세요."
+            />
+            <button className="APP_ConverBtn" onClick={this.convertBinary}>
+              변환
+            </button>
+          </div>
+        </div>
 
-        <div>
-          <div>
-            <input type="text" onChange={e => this.handleChange(e)} />
-            <button onClick={this.convertBinary}>변환</button>
+        <div className="APP_Body_Container">
+          <div className="APP_HashText">
+            {this.state.textHash ? `HASH TEXT : ${this.state.textHash}` : null}
           </div>
           {this.state.binaryTextSource.length > 0 ? (
-            <div>
-              <div>시안 1</div>
-              <div id="solidDown" style={{ display: "inline-block" }}>
-                <MY_GITICON_CONTAINER
-                  type="solid"
-                  binaryTextSource={this.state.binaryTextSource}
-                />
-              </div>
-              <div>
-                <button onClick={() => this.downloadImage("solidDown")}>
+            <div className="APP_Design_Container">
+              <div className="APP_Design_Content">
+                <div className="APP_Design_Title">Impressive Giticon</div>
+                <div className="APP_Design_Description">
+                  <div>
+                    기존 Giticon에 비해 좀 더 중복도 없이 만들어봤습니다.
+                  </div>
+                  <div>
+                    기존 Giticon은 5x5 Pixel, Impressive Giticon은 12x12
+                    Pixel입니다.
+                  </div>
+                </div>
+                <div id="solidDown" style={{ display: "inline-block" }}>
+                  <MY_GITICON_CONTAINER
+                    type="solid"
+                    binaryTextSource={this.state.binaryTextSource}
+                  />
+                </div>
+                <button
+                  className="APP_Design_DownloadBtn"
+                  onClick={() => this.downloadImage("solidDown")}
+                >
                   다운로드
                 </button>
               </div>
-              <div>시안 2 : Goticon - 바둑판에서 영감을 얻은..?</div>
-              <div id="circleDown" style={{ display: "inline-block" }}>
-                <MY_GITICON_CONTAINER
-                  type="circle"
-                  binaryTextSource={this.state.binaryTextSource}
-                />
+              <div className="APP_Design_Content">
+                <div className="APP_Design_Title">Goticon</div>
+                <div className="APP_Design_Description">
+                  <div>바둑판을 착안하여 만들어본 Goticon입니다.</div>
+                  <div>위와 같이 12x12 Pixel입니다.</div>
+                </div>
+                <div id="goticon" style={{ display: "inline-block" }}>
+                  <MY_GITICON_CONTAINER
+                    type="circle"
+                    binaryTextSource={this.state.binaryTextSource}
+                  />
+                </div>
+                <button
+                  className="APP_Design_DownloadBtn"
+                  onClick={() => this.downloadImage("goticon")}
+                >
+                  다운로드
+                </button>
               </div>
-              <div>
-                <button onClick={() => this.downloadImage("circleDown")}>
+              <div className="APP_Design_Content">
+                <div className="APP_Design_Title">TreeCon</div>
+                <div className="APP_Design_Description">
+                  <div>TreeCon은 나무를 착안하여 만든 Identicon입니다.</div>
+                  <div>
+                    자신만의 고유한 나무를 가져본다는 측면이 신선하게 다가갈 수
+                    있을 것입니다.
+                  </div>
+                </div>
+                <div id="treeDown" style={{ display: "inline-block" }}>
+                  <ArticonTree />
+                </div>
+                <button
+                  className="APP_Design_DownloadBtn"
+                  onClick={() => this.downloadImage("treeDown")}
+                >
+                  다운로드
+                </button>
+              </div>
+              <div className="APP_Design_Content">
+                <div className="APP_Design_Title">CircleCon</div>
+                <div className="APP_Design_Description">
+                  <div>CircleCon은 나무를 착안하여 만든 Identicon입니다.</div>
+                  <div>
+                    identicon을 미적으로 향상시켜본 것으로, 중복없는 아바타를
+                    넘어서서 미적으로 아름다움을 제공할 수 있을 것입니다.
+                  </div>
+                </div>
+                <div id="circleDown" style={{ display: "inline-block" }}>
+                  <ArticonCircle />
+                </div>
+                <button
+                  className="APP_Design_DownloadBtn"
+                  onClick={() => this.downloadImage("circleDown")}
+                >
                   다운로드
                 </button>
               </div>
             </div>
           ) : null}
         </div>
-      </>
+      </div>
     );
   }
 }

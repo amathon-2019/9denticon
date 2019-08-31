@@ -11,6 +11,10 @@ export class Identicon {
     this.position = 0;
 
     paper.setup(this.canvas);
+
+    // Fill white background
+    let background = new paper.Shape.Rectangle(0, 0, width, width);
+    background.fillColor = "white";
   }
 
   getParam(bits) {

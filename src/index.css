@@ -1,4 +1,15 @@
 /*===============
+  import fonts
+===============*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+* {
+font-family: 'Nanum Gothic',
+sans-serif;
+}
+
+
+/*===============
   랜딩페이지 CSS
 ===============*/
 
@@ -8,16 +19,20 @@
 .page4_sectionContainer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
-  margin: 0 20%;
+  margin: 0 10%;
+}
+
+.page2_leftElem {
+  margin-right: 5%;
 }
 
 .page1_titleText,
 .page2_titleText,
 .page3_titleText,
 .page4_titleText {
-  width: 900px;
+  width: 100%;
   font-size: 40px;
   color: #ffffff;
 }
@@ -25,7 +40,7 @@
 .page1_subText,
 .page2_subText {
   margin-top: 20px;
-  width: 720px;
+  width: 100%;
   font-size: 24px;
   color: #ffffff;
 }
@@ -52,6 +67,14 @@
 .page4_subText {
   font-size: 24px;
   color: #ffffff;
+}
+
+.page3_image {
+  height: 200px;
+}
+
+.page4_image {
+  height: 250px;
 }
 
 .page5_GoToPage_Container {
@@ -113,7 +136,7 @@ body {
 }
 
 .APP_Title {
-  margin: 50px 0;
+  margin: 3% 0;
   color: #ffffff;
   font-size: 40px;
   font-weight: 600;
@@ -122,7 +145,7 @@ body {
 .APP_HashText {
   color: #ffffff;
   font-weight: 500;
-  margin-bottom: 80px;
+  margin-bottom: 5%;
 }
 
 .APP_Input_Container {
@@ -170,7 +193,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 3%;
 }
 
 .APP_Design_Container {
@@ -181,7 +204,7 @@ body {
 }
 
 .APP_Design_Content {
-  width: 380px;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,21 +214,21 @@ body {
 .APP_Design_Title {
   color: #ffffff;
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
   font-weight: 600;
 }
 
 .APP_Design_Description {
-  width: 280px;
+  width: 51%;
   color: #ffffff;
   font-size: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 10%;
   font-weight: 600;
   text-align: center;
 }
 
 .APP_Design_DownloadBtn {
-  margin-top: 50px;
+  margin-top: 10%;
   height: 30px;
   border: 1px solid #fff;
   border-radius: 5px;

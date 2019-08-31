@@ -32,7 +32,7 @@ const Fullpage = () => (
             style={{ backgroundColor: "rgb(32, 33, 34)" }}
           >
             <div className="page2_sectionContainer">
-              <div>
+              <div className="page2_leftElem">
                 <div className="page2_titleText">What is identicon?</div>
                 <div className="page2_subText">
                   사용자를 아바타의 형태로 식별하면서 사용자의 개인 정보를
@@ -70,19 +70,19 @@ const Fullpage = () => (
                 <div className="page3_image_container">
                   <img
                     src={require("../../assets/images/circle1.png")}
-                    style={{ width: "200px", height: "200px" }}
+                    className="page3_image"
                   />
                   <img
                     src={require("../../assets/images/tree1.png")}
-                    style={{ width: "200px", height: "200px" }}
+                    className="page3_image"
                   />
                   <img
                     src={require("../../assets/images/impressiveIcon.jpeg")}
-                    style={{ width: "200px", height: "200px" }}
+                    className="page3_image"
                   />
                   <img
                     src={require("../../assets/images/goticon.jpeg")}
-                    style={{ width: "200px", height: "200px" }}
+                    className="page3_image"
                   />
                 </div>
               </div>
@@ -111,15 +111,15 @@ const Fullpage = () => (
                 <div className="page4_image_container">
                   <img
                     src={require("../../assets/images/Slide1.png")}
-                    style={{ height: "300px" }}
+                    className="page4_image"
                   />
                   <img
                     src={require("../../assets/images/Slide3.png")}
-                    style={{ height: "300px" }}
+                    className="page4_image"
                   />
                   <img
                     src={require("../../assets/images//Slide4.png")}
-                    style={{ height: "300px" }}
+                    className="page4_image"
                   />
                 </div>
               </div>

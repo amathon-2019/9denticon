@@ -9,11 +9,7 @@ const ArticonTree = ({ hashText }) => {
     identicon.tree();
   });
 
-  return (
-    <div>
-      <canvas id="canvas"></canvas>
-    </div>
-  );
+  return <canvas id="canvas"></canvas>;
 };
 
 export default ArticonTree;

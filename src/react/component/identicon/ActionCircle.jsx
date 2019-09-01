@@ -5,19 +5,11 @@ const ArticonCircle = ({ hashText }) => {
   useEffect(() => {
     const canvas = document.querySelector("#canvas1");
 
-    let identicon = new Identicon(
-      canvas,
-      240,
-      hashText
-    );
+    let identicon = new Identicon(canvas, 240, hashText);
     identicon.circles();
   });
 
-  return (
-    <div>
-      <canvas id="canvas1"></canvas>
-    </div>
-  );
+  return <canvas id="canvas1"></canvas>;
 };
 
 export default ArticonCircle;

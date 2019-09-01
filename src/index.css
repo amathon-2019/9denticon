@@ -250,3 +250,8 @@ body {
 .APP_Design_DownloadBtn:focus {
   outline: none;
 }
+
+#treeDown,
+#circleDown {
+  height: 240px;
+}

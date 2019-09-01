@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   downloadImage(idName) {
-    const node = document.getElementById(idName);
+    const node = document.getElementById(idName).childNodes[0];
     domtoimage.toJpeg(node, { quality: 0.95 }).then(function(dataUrl) {
       var link = document.createElement("a");
       link.download = "my-9denticon.jpeg";

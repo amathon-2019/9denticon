@@ -90,9 +90,7 @@ class App extends Component {
               <div className="APP_Design_Content">
                 <div className="APP_Design_Title">Impressive Giticon</div>
                 <div className="APP_Design_Description">
-                  <div>
-                    기존 Giticon에 비해 좀 더 중복도 없이 만들어봤습니다.
-                  </div>
+                  <div>기존 Giticon에 비해 중복도 없이 만들어봤습니다.</div>
                   <div>
                     기존 Giticon은 5x5 Pixel, Impressive Giticon은 12x12
                     Pixel입니다.
@@ -133,7 +131,6 @@ class App extends Component {
               <div className="APP_Design_Content">
                 <div className="APP_Design_Title">TreeCon</div>
                 <div className="APP_Design_Description">
-                  <div>TreeCon은 나무를 착안하여 만든 Identicon입니다.</div>
                   <div>
                     자신만의 고유한 나무를 가져본다는 측면이 신선하게 다가갈 수
                     있을 것입니다.
@@ -152,7 +149,6 @@ class App extends Component {
               <div className="APP_Design_Content">
                 <div className="APP_Design_Title">CircleCon</div>
                 <div className="APP_Design_Description">
-                  <div>CircleCon은 나무를 착안하여 만든 Identicon입니다.</div>
                   <div>
                     identicon을 미적으로 향상시켜본 것으로, 중복없는 아바타를
                     넘어서서 미적으로 아름다움을 제공할 수 있을 것입니다.

@@ -33,11 +33,10 @@ const Fullpage = () => (
           >
             <div className="page2_sectionContainer">
               <div className="page2_leftElem">
-                <div className="page2_titleText">What is identicon?</div>
+                <div className="page2_titleText">What is 9denticon?</div>
                 <div className="page2_subText">
-                  사용자를 아바타의 형태로 식별하면서 사용자의 개인 정보를
-                  보호하는 역할을하는 해시 값, 일반적으로 IP 주소의 시각적
-                  표현입니다.
+                  옆에 보이는 Giticon처럼 중복 없는 랜덤 프로필 사진을
+                  만들어주는 라이브러리입니다.
                 </div>
               </div>
               <div>
@@ -69,11 +68,11 @@ const Fullpage = () => (
                 </div>
                 <div className="page3_image_container">
                   <img
-                    src={require("../../assets/images/circle1.png")}
+                    src={require("../../assets/images/whiteBackCircle.png")}
                     className="page3_image"
                   />
                   <img
-                    src={require("../../assets/images/tree1.png")}
+                    src={require("../../assets/images/whiteBackTree.png")}
                     className="page3_image"
                   />
                   <img
@@ -110,15 +109,7 @@ const Fullpage = () => (
                 </div>
                 <div className="page4_image_container">
                   <img
-                    src={require("../../assets/images/Slide1.png")}
-                    className="page4_image"
-                  />
-                  <img
-                    src={require("../../assets/images/Slide3.png")}
-                    className="page4_image"
-                  />
-                  <img
-                    src={require("../../assets/images//Slide4.png")}
+                    src={require("../../assets/images/9denticonMeka.png")}
                     className="page4_image"
                   />
                 </div>

@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
 * {
-font-family: 'Nanum Gothic',
-sans-serif;
+  font-family: 'Nanum Gothic',
+    sans-serif;
 }
 
 
@@ -25,7 +25,7 @@ sans-serif;
 }
 
 .page2_leftElem {
-  margin-right: 5%;
+  margin-right: 15%;
 }
 
 .page1_titleText,
@@ -37,7 +37,13 @@ sans-serif;
   color: #ffffff;
 }
 
-.page1_subText,
+.page1_subText {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 24px;
+  color: #ffffff;
+}
+
 .page2_subText {
   margin-top: 20px;
   width: 100%;
@@ -59,10 +65,6 @@ sans-serif;
   margin-right: 50px;
 }
 
-.page4_image_container img {
-  margin: 0 20px 18px 0;
-}
-
 .page3_subText,
 .page4_subText {
   font-size: 24px;
@@ -74,7 +76,7 @@ sans-serif;
 }
 
 .page4_image {
-  height: 250px;
+  width: 80%;
 }
 
 .page5_GoToPage_Container {
@@ -220,6 +222,7 @@ body {
 
 .APP_Design_Description {
   width: 51%;
+  height: 70px;
   color: #ffffff;
   font-size: 12px;
   margin-bottom: 10%;

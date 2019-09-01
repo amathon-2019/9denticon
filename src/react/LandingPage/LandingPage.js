@@ -35,8 +35,8 @@ const Fullpage = () => (
               <div className="page2_leftElem">
                 <div className="page2_titleText">What is 9denticon?</div>
                 <div className="page2_subText">
-                  옆에 보이는 Giticon처럼 중복 없는 랜덤 프로필 사진을
-                  만들어주는 라이브러리입니다.
+                  <div>옆에 보이는 Giticon처럼 중복 없는</div>
+                  <div>랜덤 프로필 사진을 만들어주는 라이브러리입니다.</div>
                 </div>
               </div>
               <div>
